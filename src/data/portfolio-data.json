@@ -1,0 +1,74 @@
+{
+  "profile": {
+    "name": "Bereket Degfew",
+    "role": "Full-Stack Developer",
+    "tagline": "Building clean, high-performance web applications.",
+    "location": "Addis Ababa, Ethiopia",
+    "detail": ["My name is Bereket Degfew. I am a third year computer science student at Addis Ababa University.",
+               "After a brief introduction to coding in high school, I realized that building digital tools was exactly what I wanted to do.",
+               "Since then I have been teaching myself to code.",
+               "I've built a solid foundation in Full-stack development.",
+               "My philosophy is simple: Do what you love, love what you do."],
+    "interest": "I am interested in web development, software engineering, and technology in general. I enjoy learning new technologies and applying them to solve real-world problems.",
+    "goal": "My goal is to build systems that are dependable, scalable, and maintainable. I am passionate about creating software that makes a positive impact on people's lives."
+  },
+  "skills": {
+      "Languages": ["JavaScript", "TypeScript", "Python"],
+      "Frontend": ["React", "Next.js", "Tailwind CSS"],
+      "Backend": ["Node.js", "Express"],
+      "Data": ["MongoDB", "Prisma", "MySQL"],
+      "Tooling": ["Git", "Docker", "Render"]
+    },
+  "contact": {
+    "email": "barakidg@gmail.com",
+    "phone": "+251 953 518 221",
+    "availability": "Available for Full-Stack Roles",
+    "socials": [
+      { "label": "GitHub", "url": "https://github.com/barakidg", "icon": "github" },
+      { "label": "LinkedIn", "url": "https://linkedin.com/in/bereket-degfew", "icon": "linkedin" }
+    ]
+  },
+
+  "projects": [
+    {
+      "image":"/eco.jpg",
+      "title": "Ecommerce Website",
+      "description": "A modern full-stack website built using React, Express, prisma and postgresql.",
+      "tags": ["React", "Prisma", "Express"],
+      "liveUrl": "",
+      "codeUrl": "https://github.com/barakidg/Ecommerce.git"
+    },
+    { 
+      "image":"/med.jpg",
+      "title": "Medicine Finder",
+      "description": "A full-stack website that helps users find pharmacies and check medicine availability.",
+      "tags": ["React", "Express", "PostgreSQL"],
+      "liveUrl": "",
+      "codeUrl": "https://github.com/barakidg/medicine-finder.git"
+    },
+    {
+      "image":"/portfolio.jpg",
+      "title": "Portfolio Website",
+      "description": "A professional portfolio website built using React and Vite.",
+      "tags": ["React"],
+      "liveUrl": "https://portfolio-wzhj.onrender.com/",
+      "codeUrl": "https://github.com/barakidg/future_fs_o1.git"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Full-Stack Web Developer Intern",
+      "company": "Addis Ababa University",
+      "location": "Addis Ababa, Ethiopia",
+      "duration": "Jul 2026 - Present",
+      "description": "working on Exam Management System including safe exam browser development."
+    },
+    {
+      "title": "Full-Stack Developer Intern",
+      "company": "Future Interns",
+      "location": "Remote",
+      "duration": "Jul 2026 - Present",
+      "description": "Developing web applications using React, Node.js, and MongoDB."
+    }
+  ]
+}

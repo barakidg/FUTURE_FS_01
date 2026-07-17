@@ -125,7 +125,7 @@
 
 @media (max-width: 720px) {
   .header {
-    padding: 0 2rem;
+    padding: 0 1.5rem;
   }
   .nav-toggle {
     display: inline-flex;
@@ -133,8 +133,8 @@
 
   
 .logo-icon {
-    width: 37px;
-    height: 32px;
+    width: 35px;
+    height: 30px;
     border-radius: 50%;
   }
 

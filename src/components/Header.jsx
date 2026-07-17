@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Code2, X, Moon, Sun, Menu } from "lucide-react";
 import { useTheme } from "../context/ThemeContext.jsx";
@@ -14,6 +14,9 @@ export default function Header() {
     const [activeSection, setActiveSection] = useState("#intro");
     const [open, setOpen] = useState(false);
     const { theme, toggleTheme } = useTheme();
+
+    const navRef = useRef(null);
+    const toggleRef = useRef(null);
 
     useEffect(() => {
         const sections = NAV_LINKS.map(link =>
@@ -39,6 +42,26 @@ export default function Header() {
     }, []);
 
     useEffect(() => {
+        function handleClickOutside(e) {
+            if (!open) return;
+
+            if (
+                navRef.current &&
+                !navRef.current.contains(e.target) &&
+                toggleRef.current &&
+                !toggleRef.current.contains(e.target)
+            ) {
+                setOpen(false);
+            }
+        }
+
+        document.addEventListener("mousedown", handleClickOutside);
+
+        return () =>
+            document.removeEventListener("mousedown", handleClickOutside);
+    }, [open]);
+
+    useEffect(() => {
         function handleResize() {
             if (window.innerWidth > 720) {
                 setOpen(false);
@@ -59,7 +82,7 @@ export default function Header() {
             }}>
                 <Code2 size={24} strokeWidth={2} className="logo-icon"/>
             </Link>
-            <nav className={`nav ${open ? "open" : ""}`}>
+            <nav className={`nav ${open ? "open" : ""}`} ref={navRef}>
                 {NAV_LINKS.map((link) => (
                     <a key={link.hash} href={link.hash} onClick={() => {setActiveSection(link.hash); setOpen(false);}} className={activeSection === link.hash ? "active" : ""}>
                         {link.label}
@@ -77,6 +100,7 @@ export default function Header() {
                 <button
                     className="nav-toggle"
                     onClick={() => setOpen(prev => !prev)}
+                    ref={toggleRef}
                 >
                     {open ? <X size={18} /> : <Menu size={18} />}
                 </button>

@@ -134,3 +134,10 @@ body {
         color var(--theme-fade);
 }
 
+
+
+a, 
+button, 
+input[type="submit"] {
+  -webkit-tap-highlight-color: transparent;
+}
